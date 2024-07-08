@@ -1,0 +1,7 @@
+#!/bin/bash
+
+name=$1
+shift
+
+jdeps -v $@ | grep -v '\-> java(x?)\.' | grep -E '^\s' | perl -e 'print "digraph \"Design\" {\n"; while(<>){ chomp; if ($_ =~ /^\s+(\S+)\s+->\s+(\S+)\s/){ print "\"$1\" -> \"$2\";\n";}} print"\"'$name'\" [shape=\"rectangle\"];\n}\n";' > design.dot
+dot -Tpdf design.dot  > design.pdf
