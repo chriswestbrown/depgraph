@@ -1,0 +1,2 @@
+jar cfm Lab08.jar Manifest.txt *.class
+

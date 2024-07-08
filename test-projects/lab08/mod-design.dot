@@ -1,0 +1,11 @@
+digraph "Design" {
+"Lab08" -> "Manager"[ fontsize="10pt", nojustify=false, label="<constructor>\l// draw money and machines\lvoid draw()\l// execute left/right/play/*report\lvoid exec(String comm)\l"];
+"Lab08" -> "Reader"[ fontsize="10pt", nojustify=false, label="// create array of machines based on file fname\lstatic Machine[] machines(String fname)\l"];
+"Manager" -> "Draw" [ fontsize="10pt", nojustify=false, label="// print elements of m with index\l// pos element highlighted\lstatic void show(Machine[] m, int pos)"];
+"Manager" -> "Machine" [ fontsize="10pt", nojustify=false, label="\l// returns amt won (0 means lost)\ldouble play()\lboolean inService()\lvoid report()\l"];
+"Reader" -> "Pirate" [ fontsize="10pt", label="<constructor>"];
+"Reader" -> "Yoda" [ fontsize="10pt", label="<constructor>"];
+"Pirate" -> "Machine" [ fontsize="10pt", label="<extends>"];
+"Yoda" -> "Machine" [ fontsize="10pt", label="<extends>"];
+"Draw" -> "Machine" [ fontsize="10pt", label="String getName()"];
+}

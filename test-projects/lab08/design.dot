@@ -1,0 +1,23 @@
+digraph "Design" {
+"Lab08" -> "Machine";
+"Lab08" -> "Manager";
+"Lab08" -> "Reader";
+"Machine" -> "MechModel";
+"Machine" -> "MoneyModel";
+"Manager" -> "Draw";
+"Manager" -> "Machine";
+"MechModelA" -> "MechModel";
+"MechModelB" -> "MechModel";
+"Pirate" -> "Machine";
+"Pirate" -> "MechModel";
+"Pirate" -> "MechModelA";
+"Pirate" -> "MoneyModel";
+"Reader" -> "Machine";
+"Reader" -> "Pirate";
+"Reader" -> "Yoda";
+"Yoda" -> "Machine";
+"Yoda" -> "MechModel";
+"Yoda" -> "MechModelB";
+"Yoda" -> "MoneyModel";
+"Draw.class" [shape="rectangle"];
+}
